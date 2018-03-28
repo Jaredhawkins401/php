@@ -6,8 +6,22 @@ $table .= "</table>\n"; //string concatenate, like +=
 for($rows = 1; $rows <= $size; $rows++)
 {
     $table .= "\t<tr>";
+    for($cols = 1; $cols <= $size; $cols++):
+        $table .= "<td>" . $rows * $cols . "</td>";
+    endfor;
     $table .= "\t</tr>\n";
 }
 
-echo $table;
+$table .= "</table>\n";
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<?php echo $table; ?>
+</body>
+</html>
